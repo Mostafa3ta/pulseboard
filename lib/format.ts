@@ -8,7 +8,7 @@ const moneyExact = new Intl.NumberFormat('en-US', { style: 'currency', currency:
 const moneyCompact = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 })
 const integer = new Intl.NumberFormat('en-US')
 const integerCompact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 })
-const percent = new Intl.NumberFormat('en-US', { style: 'percent', maximumFractionDigits: 1 })
+const percent = new Intl.NumberFormat('en-US', { style: 'percent', minimumFractionDigits: 1, maximumFractionDigits: 1 })
 const signedPercent = new Intl.NumberFormat('en-US', { style: 'percent', maximumFractionDigits: 1, signDisplay: 'exceptZero' })
 
 /** $12,345 */

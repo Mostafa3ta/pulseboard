@@ -4,7 +4,7 @@ A sales and operations dashboard over a year of seeded orders: KPI tiles with pe
 
 [![CI](https://github.com/Mostafa3ta/pulseboard/actions/workflows/ci.yml/badge.svg)](https://github.com/Mostafa3ta/pulseboard/actions/workflows/ci.yml)
 
-**Live demo:** _coming soon_
+**Live demo:** [pulseboard-enb.pages.dev](https://pulseboard-enb.pages.dev)
 
 ![Pulseboard: filters, four KPI tiles with change against the previous period, and a revenue line with a zoom slider, light theme](docs/screenshot.png)
 

@@ -5,9 +5,10 @@ import type { Granularity } from './periods'
 
 const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })
 const moneyExact = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 })
-const moneyCompact = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 })
+// minimumFractionDigits is set explicitly: older ICU builds (Node 20) otherwise print "$92.0" where newer ones print "$92".
+const moneyCompact = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', minimumFractionDigits: 0, maximumFractionDigits: 1 })
 const integer = new Intl.NumberFormat('en-US')
-const integerCompact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 })
+const integerCompact = new Intl.NumberFormat('en-US', { notation: 'compact', minimumFractionDigits: 0, maximumFractionDigits: 1 })
 const percent = new Intl.NumberFormat('en-US', { style: 'percent', minimumFractionDigits: 1, maximumFractionDigits: 1 })
 const signedPercent = new Intl.NumberFormat('en-US', { style: 'percent', maximumFractionDigits: 1, signDisplay: 'exceptZero' })
 
